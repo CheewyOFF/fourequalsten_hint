@@ -95,7 +95,7 @@ Email : cheewy.perso@gmail.com
 Developper : Sveinn Steinarsson</br>
 Website : https://fourequalsten.app</br>
 Email : fourequalsten@fourequalsten.app</br>
-Youtube Channel : svenstone</br>
+Youtube Channel : [svenstone](https://www.youtube.com/user/svenstone)</br>
 
 ***Buy Sveinn a Coffee ♥ :*** https://www.buymeacoffee.com/steinarsson
 
