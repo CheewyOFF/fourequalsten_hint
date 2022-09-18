@@ -31,7 +31,7 @@ py -m pip install fourequalsten_hint
 
 Code to write down in your file *before using the commands of the package* :</br>
 ```
-From fourequalsten_hint import feth
+from fourequalsten_hint import feth
 ```
 
 ## Utilisation Guide :
@@ -41,7 +41,7 @@ From fourequalsten_hint import feth
 1. Create a python file anywhere on your computer (ex: ```test.py```)
 2. In this file, write down the following code :
 ```
-import fourequalsten_hint as feth
+from fourequalsten_hint import feth
 feth.fancy_solve()
 ```
 3. Execute the program and follow the instructions in the terminal</br></br>
