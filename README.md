@@ -31,8 +31,8 @@ py -m pip install fourequalsten_hint
 
 ## Utilisation Guide :
 
-If you just want the answers :
-------------
+**If you just want the answers :**
+
 1. Create a python file anywhere on your computer (ex: ```test.py```)
 2. In this file, write down the following code :
 ```
@@ -41,8 +41,8 @@ feth.fancy_solve()
 ```
 3. Execute the program and follow the instructions in the terminal
 
-If you want to use the functions in your program :
---------------
+**If you want to use the functions in your program :**
+
 - ```feth.solve("<THE DIGITS>","<THE BANNED OPERATORS>",<TYPE OF RETURN>)```
 
 *Note : Documentation of the functions are right underneath*
