@@ -7,7 +7,7 @@
 This tiny program in Python allows you to quickly and simply calculate every possible solutions to the famous *4=10* game.</br>
 I had a lot of fun developping it, I hope you will enjoy it.</br>
 
-Note : The code don't have comments, but if you want some, just send me an email and I will do it.
+*Note : The code don't have comments, but if you want some, just send me an email and I will do it.*
 
 ## DISCLAIMER BEFORE USING IT
 
