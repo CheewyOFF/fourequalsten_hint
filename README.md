@@ -17,7 +17,8 @@ I had a lot of fun developping it, I hope you will enjoy it.</br>
 
 ## Installation :
 
-1. Use pip to install the package</br></br>
+**1. Use pip to install the package**
+
 For Unix/macOS :
 ```
 python3 -m pip install fourequalsten_hint
@@ -26,7 +27,9 @@ For Windows :
 ```
 py -m pip install fourequalsten_hint
 ```
-2. Import the package in your program</br>
+**2. Import the package in your program</br>**
+
+Code to write down in your file *before using the commands of the package* :</br>
 ```import fourequalsten_hint as feth```
 
 ## Utilisation Guide :
@@ -43,7 +46,7 @@ feth.fancy_solve()
 
 **If you want to use the functions in your program :**
 
-- ```feth.solve("<THE DIGITS>","<THE BANNED OPERATORS>",<TYPE OF RETURN>)```
+```feth.solve("<THE DIGITS>","<THE BANNED OPERATORS>",<TYPE OF RETURN>)```
 
 *Note : Documentation of the functions are right underneath*
 
