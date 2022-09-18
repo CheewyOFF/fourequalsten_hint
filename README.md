@@ -90,6 +90,8 @@ feth.solve(input_nb,input_op,all_solutions)
 Developper : Cheewy</br>
 Email : cheewy.perso@gmail.com
 
+***Buy Me a Coffee ♥ :*** [Click here](https://www.buymeacoffee.com/CheewyOFF)
+
 ### 4=10
 
 Developper : Sveinn Steinarsson</br>
