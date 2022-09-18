@@ -44,7 +44,7 @@ import fourequalsten_hint as feth
 import fourequalsten_hint as feth
 feth.fancy_solve()
 ```
-3. Execute the program and follow the instructions in the terminal
+3. Execute the program and follow the instructions in the terminal</br></br>
 
 **If you want to use the functions in your program :**
 
