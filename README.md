@@ -31,7 +31,7 @@ py -m pip install fourequalsten_hint
 
 Code to write down in your file *before using the commands of the package* :</br>
 ```
-import fourequalsten_hint as feth
+From fourequalsten_hint import feth
 ```
 
 ## Utilisation Guide :
