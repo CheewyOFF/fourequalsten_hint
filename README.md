@@ -9,7 +9,7 @@ I had a lot of fun developping it, I hope you will enjoy it.</br>
 
 *Note : The code don't have comments, but if you want some, just send me an email and I will do it.*
 
-## DISCLAIMER BEFORE USING IT
+## ❗️ DISCLAIMER BEFORE USING IT ❗️
 
 *Use this program sparingly, or only when you are **REALLY** stuck and you have no more daily solution left.*</br>
 *Using this program too much will ruin your entire game experience, and will be very insulting to the game developpers.*</br>
