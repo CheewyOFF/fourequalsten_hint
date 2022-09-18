@@ -1,3 +1,100 @@
+def fancy_solve():
+    import os
+
+    missing_operator = []
+    current_nb = []
+
+    cont = "1"
+    while(cont == "1"):
+        os.system('cls')
+        input_str = str(input("Enter the 4 enigma's digits : "))
+        while(decompose(input_str,0) == []):
+            input_str = str(input("Enter the 4 enigma's digits : "))
+
+        tmp_digits = input_str
+        current_nb = decompose(input_str,0)
+
+        input_str = str(input("Enter the banned operators (Press Enter if there's none) : "))
+        while(decompose(input_str,1) == []):
+            input_str = str(input("Enter the banned operators (Press Enter if there's none) : "))
+
+        tmp_banop = input_str
+        missing_operator = decompose(input_str,1)
+
+        operator_list = ["+","-","*","/"]
+
+        if missing_operator != ["none"]:
+            for i in missing_operator:
+                operator_list.remove(i)
+
+        for k in range(len(current_nb)):
+            current_nb[k] = int(current_nb[k])
+        pattern = {"par_ou1" : 0, "num1" : -1, "op1" : 0, "par_ou2" : 0, "num2" : -1, "par_fe1" : 0, "op2" : 0, "par_ou3" : 0, "num3"  : -1, "par_fe2" : 0, "op3" : 0, "num4" : -1, "par_fe3" : 0}
+
+        solution = research(pattern,current_nb,operator_list)
+        os.system('cls')
+        print("Digits : " + tmp_digits)
+        if(missing_operator == ["none"]):
+            print("Banned operators : none")
+        else:
+            print("Banned operators : " + tmp_banop)
+        if(solution == []):
+            print("No solution found. You enter wrong values or there is no solution.")
+        else:
+            print("We found [ " + str(len(solution)) + " ] solutions !")
+            if(len(solution) == 1):
+                print("Here it is :")
+                print("")
+                print(solution[0])
+            else:
+                print("Here is one : ")
+                print("")
+                print(solution[0])
+                print("")
+                print("Would you like to see all the answers ?")
+
+                display_all = str(input("(Press Enter to skip, 0 to display all possible solutions) : "))
+                while(display_all != "" and display_all != "0"):
+                    display_all = str(input("(Press Enter to skip, 0 to display all possible solutions) : "))
+
+                print("")
+                if(display_all == "0"):
+                    for k in range(len(solution)):
+                        print("Solution n°"+str(k+1)+" : "+solution[k])
+
+        print("")
+        print("")
+        print("")
+                
+        cont = str(input("Would you like to continue ? (1 for YES, 0 for NO) : "))
+        while(cont not in ["1","0"]):
+            print("Please enter either 0 or 1.")
+            cont = str(input("Would you like to continue ? (1 for YES, 0 for NO) : "))
+
+def solve(input_nb,input_op,all_solutions):
+    current_nb = decompose(input_nb,0)
+    missing_operator = decompose(input_op,1)
+
+    if(current_nb != [] and missing_operator != []):
+        operator_list = ["+","-","*","/"]
+
+        if missing_operator != ["none"]:
+            for i in missing_operator:
+                operator_list.remove(i)
+
+        for k in range(len(current_nb)):
+            current_nb[k] = int(current_nb[k])
+        pattern = {"par_ou1" : 0, "num1" : -1, "op1" : 0, "par_ou2" : 0, "num2" : -1, "par_fe1" : 0, "op2" : 0, "par_ou3" : 0, "num3"  : -1, "par_fe2" : 0, "op3" : 0, "num4" : -1, "par_fe3" : 0}
+
+        solution = research(pattern,current_nb,operator_list)
+
+        if(all_solutions == 0 and solution != []):
+            return solution[0]
+        elif(all_solutions == 1 and solution != []):
+            return solution
+        else:
+            return []
+
 def decompose(input,x):
     number_list = ["0","1","2","3","4","5","6","7","8","9"]
     operator_list = ["+","-","*","/"]
