@@ -81,7 +81,7 @@ feth.solve("<THE DIGITS>","<THE BANNED OPERATORS>",<TYPE OF RETURN>)
   
 ## License
 
-<a href="https://github.com/CheewyOFF/fourequalsten_hint/blob/main/LICENSE">MIT License</a>
+[MIT License](https://github.com/CheewyOFF/fourequalsten_hint/blob/main/LICENSE)
 
 ## Credits :
 
