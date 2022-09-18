@@ -12,7 +12,7 @@ I had a lot of fun developping it, I hope you will enjoy it.</br>
 ## ❗️ DISCLAIMER BEFORE USING IT ❗️
 
 *Use this program sparingly, or only when you are **REALLY** stuck and you have no more daily solution left.*</br>
-*Using this program too much will RUIN your entire game experience, and will be VERY insulting for the game developper.*</br>
+*Using this program too much will **RUIN** your entire game experience, and will be **VERY** insulting for the game developper.*</br>
 *I am **NOT** responsible for any bad game experience.*</br>
 
 ## Installation :
