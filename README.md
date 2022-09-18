@@ -17,6 +17,7 @@ Note : The code don't have comments, but if you want some, just send me an email
 
 ## Installation :
 
+1. Use pip to install the package
 For Unix/macOS :
 ```
 python3 -m pip install fourequalsten_hint
@@ -25,15 +26,52 @@ For Windows :
 ```
 py -m pip install fourequalsten_hint
 ```
+2. import the package in your program
+python```import fourequalsten_hint as feth```
 
 ## Utilisation Guide :
 
-1. Start the program
-2. Enter the 4 digits (ex: 1234)
-3. Enter the banned operators or press enter if there's none (ex: +*)
-4. Press 0 to display every solutions, or press enter if you want to skip this step
-5. If you want to use the program again, press 1, and if you want to leave, press 0
+If you just want the answers :
+------------
+1. Create a python file anywhere on your computer (ex: ```test.py```)
+2. In this file, write down the following code :
+python```
+import fourequalsten_hint as feth
+feth.fancy_solve()
+```
+3. Execute the program and follow the instructions in the terminal
 
+If you want to use the functions in your program :
+--------------
+- python```feth.solve("<THE DIGITS>","<THE BANNED OPERATORS>",<TYPE OF RETURN>)```
+
+*Note : Documentation of the functions are right underneath*
+
+## Documentation
+- python```feth.solve("<THE DIGITS>","<THE BANNED OPERATORS>",<TYPE OF RETURN>)```
+  The python```solve()``` function takes 3 parameters :
+    - 1rst : String made of 4 digits (the ones in the enigma)
+      *ex *: python```"1234"```
+    - 2nd : String made of the banned operators
+      Working chars :
+        - '+' for plus
+        - '-' for minus
+        - '*' for multiplication
+        - '/' for division
+        - Empty string for none : ""
+      *ex :* python```"+"```, python```"-+"```, python```""```
+    - 3rd : 0 or 1 depending of the informations you want in return
+      0 : Returns one possible solution in the form of a string
+        *ex *: python```"(1+2+3)+4"```
+      1 : Returns every possible solutions in the form of a list of strings
+        *ex *: python```["(1+2+3)+4", ... , "4+3+2+1"]```
+      
+  *Note : If there's no result, the function will return an empty list*
+  
+- python```feth.fancy_solve()```
+  The python```fancy_solve()``` function takes no parameters, and will return nothing.
+  It is made of multiple affordable inputs, prints and os.clear to give to the user a casual and simple use of the program.
+  
 ## License
 
 <a href="https://github.com/CheewyOFF/fourequalsten_hint/blob/main/LICENSE">MIT License</a>
