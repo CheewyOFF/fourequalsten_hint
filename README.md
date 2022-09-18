@@ -36,7 +36,7 @@ py -m pip install fourequalsten_hint
 
 ## Credits :
 
-### This Program
+### Fourequalsten_hint
 
 Developper : Cheewy</br>
 Email : cheewy.perso@gmail.com
