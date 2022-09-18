@@ -19,11 +19,11 @@ Note : The code don't have comments, but if you want some, just send me an email
 
 For Unix/macOS :
 ```
-python3 -m pip install 4equals10
+python3 -m pip install fourequalsten_hint
 ```
 For Windows :
 ```
-py -m pip install 4equals10
+py -m pip install fourequalsten_hint
 ```
 
 ## Utilisation Guide :
