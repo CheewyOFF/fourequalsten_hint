@@ -4,14 +4,14 @@
 
 ## Description : 
 
-This tiny program in Python allows you to quickly and simply calculate every possible solutions to the famous *4=10* game.
-I had a lot of fun developping it, I hope you will enjoy it.
+This tiny program in Python allows you to quickly and simply calculate every possible solutions to the famous *4=10* game.</br>
+I had a lot of fun developping it, I hope you will enjoy it.</br>
 
 ## DISCLAIMER BEFORE USING IT
 
-*Use this program sparingly, or only when you are **REALLY** stuck and you have no more daily solution left.*
-*Using this program too much will ruin your entire game experience, and will be very insulting to the game developpers.*
-*I am **NOT** responsible for any bad game experience.*
+*Use this program sparingly, or only when you are **REALLY** stuck and you have no more daily solution left.*</br>
+*Using this program too much will ruin your entire game experience, and will be very insulting to the game developpers.*</br>
+*I am **NOT** responsible for any bad game experience.*</br>
 
 ## Installation :
 
@@ -33,10 +33,10 @@ Developper : Cheewy
 
 ### 4=10
 
-Developper : Sveinn Steinarsson
-Website : fourequalsten.app
-Email : fourequalsten@fourequalsten.app
-Youtube Channel : svenstone
+Developper : Sveinn Steinarsson</br>
+Website : fourequalsten.app</br>
+Email : fourequalsten@fourequalsten.app</br>
+Youtube Channel : svenstone</br>
 
-Download game on Google Play Store : https://play.google.com/store/apps/details?id=app.fourequalsten.fourequalsten_app&hl=en_US&gl=US
+Download game on Google Play Store : https://play.google.com/store/apps/details?id=app.fourequalsten.fourequalsten_app&hl=en_US&gl=US</br>
 Download game on Apple Play Store : https://apps.apple.com/us/app/4-10/id1609871477
