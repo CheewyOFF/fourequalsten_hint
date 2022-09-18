@@ -13,3 +13,4 @@ I had a lot of fun developping it, I hope you will enjoy it.
 *Using this program too much will ruin your entire game experience, and will be very insulting to the game developpers.*
 *I am **NOT** responsible for any bad game experience.*
 
+## Installation :
