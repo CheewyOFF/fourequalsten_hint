@@ -93,7 +93,7 @@ Email : cheewy.perso@gmail.com
 ### 4=10
 
 Developper : Sveinn Steinarsson</br>
-Website : fourequalsten.app</br>
+Website : https://fourequalsten.app</br>
 Email : fourequalsten@fourequalsten.app</br>
 Youtube Channel : svenstone</br>
 
