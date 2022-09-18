@@ -65,7 +65,7 @@ feth.solve("<THE DIGITS>","<THE BANNED OPERATORS>",<TYPE OF RETURN>)
         - '-' for minus
         - '*' for multiplication
         - '/' for division
-        - Empty string for none : ""
+        - Empty string for none : ""</br>
       *Ex :* ```"+"```, ```"-+"```, ```""```
     - 3rd : 0 or 1 depending of the informations you want in return</br>
         - 0 : Returns one possible solution in the form of a string</br>
