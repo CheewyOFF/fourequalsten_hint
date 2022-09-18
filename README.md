@@ -1,3 +1,5 @@
 # 4=10's Solution Generator
 
-**by Cheewy**
+<span style="color:#8FF3FF">***by Cheewy***</span>
+
+## Description : 
