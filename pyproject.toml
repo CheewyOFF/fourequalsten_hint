@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "4equals10"
+name = "fourequalsten_hint"
 version = "1.0.0"
 authors = [
   { name="Cheewy", email="cheewy.perso@gmail.com" },
@@ -19,4 +19,4 @@ classifiers = [
 ]
 
 [project.urls]
-"Github Depository" = "https://github.com/CheewyOFF/4equals10"
+"Github Depository" = "https://github.com/CheewyOFF/fourequalsten_hint"
