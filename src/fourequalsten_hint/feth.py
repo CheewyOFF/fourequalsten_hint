@@ -145,18 +145,6 @@ def research(pattern,current_nb,operator_list):
     for i in current_nb:
         nb_chiffre[i] = current_nb.count(i)
 
-    if(len(nb_chiffre) == 4):
-        nb_db = 24
-    elif(len(nb_chiffre) == 3):
-        nb_db = [3,1,0,0]
-    elif(len(nb_chiffre) == 2):
-        if(nb_chiffre[current_nb[0]] == 2):
-            nb_db = [0,2,0,0]
-        else:
-            nb_db = [1,0,1,0]
-    elif(len(nb_chiffre) == 1):
-        nb_db = [0,0,0,1]
-
     nb_par = 0
     nb_signe = 0
     nb_chiffre = 0
@@ -306,7 +294,7 @@ def calcul(pattern):
                     calcul_res = calcul_op(calcul_res,pattern["num4"],pattern["op3"])
                 else:
                     calcul_res = calcul_op(pattern["num2"],pattern["num3"],pattern["op2"])
-                    calcul_res = calcul_op(calcul_res,pattern["num1"],pattern["op1"])
+                    calcul_res = calcul_op(pattern["num1"],calcul_res,pattern["op1"])
                     calcul_res = calcul_op(calcul_res,pattern["num4"],pattern["op3"])
         elif(pattern["par_ou2"] == 1):
             if(pattern["par_fe2"] == 1):
