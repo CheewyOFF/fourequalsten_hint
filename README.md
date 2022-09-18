@@ -14,3 +14,29 @@ I had a lot of fun developping it, I hope you will enjoy it.
 *I am **NOT** responsible for any bad game experience.*
 
 ## Installation :
+
+Soon :)
+
+## Utilisation Guide :
+
+1. Start the program
+2. Enter the 4 digits (ex: 1234)
+3. Enter the banned operators or press enter if there's none (ex: +*)
+4. Press 0 to display every solutions, or press enter if you want to skip this step
+5. If you want to use the program again, press 1, and if you want to leave, press 0
+
+## Credits :
+
+### This Program
+
+Developper : Cheewy
+
+### 4=10
+
+Developper : Sveinn Steinarsson
+Website : fourequalsten.app
+Email : fourequalsten@fourequalsten.app
+Youtube Channel : svenstone
+
+Download game on Google Play Store : https://play.google.com/store/apps/details?id=app.fourequalsten.fourequalsten_app&hl=en_US&gl=US
+Download game on Apple Play Store : https://apps.apple.com/us/app/4-10/id1609871477
