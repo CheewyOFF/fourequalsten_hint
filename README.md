@@ -17,15 +17,15 @@ I had a lot of fun developping it, I hope you will enjoy it.</br>
 
 ## Installation :
 
-1. Use pip to install the package</br>
-  For Unix/macOS :
-  ```
-  python3 -m pip install fourequalsten_hint
-  ```
-  For Windows :
-  ```
-  py -m pip install fourequalsten_hint
-  ```
+1. Use pip to install the package</br></br>
+For Unix/macOS :
+```
+python3 -m pip install fourequalsten_hint
+```
+For Windows :
+```
+py -m pip install fourequalsten_hint
+```
 2. Import the package in your program</br>
 ```import fourequalsten_hint as feth```
 
