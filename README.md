@@ -55,12 +55,12 @@ feth.solve("<THE DIGITS>","<THE BANNED OPERATORS>",<TYPE OF RETURN>)
 *Note : Documentation of the functions are right underneath*
 
 ## Documentation
-- ```feth.solve("<THE DIGITS>","<THE BANNED OPERATORS>",<TYPE OF RETURN>)```</br>
+- ```feth.solve("<THE DIGITS>","<THE BANNED OPERATORS>",<TYPE OF RETURN>)```</br></br>
   The ```solve()``` function takes 3 parameters :
     - 1rst : String made of 4 digits (the ones in the enigma)
       *ex *: ```"1234"```
-    - 2nd : String made of the banned operators
-      Working chars :
+    - 2nd : String made of the banned operators</br>
+        Working chars :
         - '+' for plus
         - '-' for minus
         - '*' for multiplication
