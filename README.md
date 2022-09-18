@@ -73,7 +73,7 @@ feth.solve("<THE DIGITS>","<THE BANNED OPERATORS>",<TYPE OF RETURN>)
         - 1 : Returns every possible solutions in the form of a list of strings</br>
           *Ex :* ```["(1+2+3)+4", ... , "4+3+2+1"]```
       
-  *Note : If there's no result, the function will return an empty list*
+  *Note : If there's no result, the function will return an empty list*</br></br>
   
 - ```feth.fancy_solve()```</br></br>
   The ```fancy_solve()``` function takes no parameters, and will return nothing.</br>
