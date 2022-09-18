@@ -36,7 +36,7 @@ py -m pip install fourequalsten_hint
 
 ## License
 
-<a href="https://github.com/CheewyOFF/fourequalsten_hint/LICENSE">MIT License</a>
+<a href="https://github.com/CheewyOFF/fourequalsten_hint/blob/main/LICENSE">MIT License</a>
 
 ## Credits :
 
