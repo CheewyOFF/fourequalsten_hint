@@ -9,9 +9,7 @@ I had a lot of fun developping it, I hope you will enjoy it.
 
 ## DISCLAIMER BEFORE USING IT
 
-Use this program sparingly, or only when you are REALLY stuck and you have no more daily solution left.
--------------------
-Using this program too much will ruin your entire game experience, and will be very insulting to the game developpers.
--------------------
-I am not responsible for any bad game experience.
--------------------
+*Use this program sparingly, or only when you are **REALLY** stuck and you have no more daily solution left.*
+*Using this program too much will ruin your entire game experience, and will be very insulting to the game developpers.*
+*I am **NOT** responsible for any bad game experience.*
+
