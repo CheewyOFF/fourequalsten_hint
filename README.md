@@ -26,7 +26,7 @@ For Windows :
 ```
 py -m pip install fourequalsten_hint
 ```
-2. import the package in your program
+2. import the package in your program</br>
 python```import fourequalsten_hint as feth```
 
 ## Utilisation Guide :
