@@ -17,7 +17,14 @@ Note : The code don't have comments, but if you want some, just send me an email
 
 ## Installation :
 
-Soon :)
+For Unix/macOS :
+```
+python3 -m pip install 4equals10
+```
+For Windows :
+```
+py -m pip install 4equals10
+```
 
 ## Utilisation Guide :
 
@@ -31,7 +38,7 @@ Soon :)
 
 ### This Program
 
-Developper : Cheewy
+Developper : Cheewy</br>
 Email : cheewy.perso@gmail.com
 
 ### 4=10
