@@ -58,7 +58,7 @@ feth.solve("<THE DIGITS>","<THE BANNED OPERATORS>",<TYPE OF RETURN>)
 - ```feth.solve("<THE DIGITS>","<THE BANNED OPERATORS>",<TYPE OF RETURN>)```</br></br>
   The ```solve()``` function takes 3 parameters :
     - 1rst : String made of 4 digits (the ones in the enigma)</br>
-      *ex :* ```"1234"```
+      *Ex :* ```"1234"```
     - 2nd : String made of the banned operators</br>
         Working chars :
         - '+' for plus
@@ -67,11 +67,11 @@ feth.solve("<THE DIGITS>","<THE BANNED OPERATORS>",<TYPE OF RETURN>)
         - '/' for division
         - Empty string for none : ""</br>
       *ex :* ```"+"```, ```"-+"```, ```""```
-    - 3rd : 0 or 1 depending of the informations you want in return
+    - 3rd : 0 or 1 depending of the informations you want in return</br>
       0 : Returns one possible solution in the form of a string</br>
-        *ex :* ```"(1+2+3)+4"```
+        *Ex :* ```"(1+2+3)+4"```</br>
       1 : Returns every possible solutions in the form of a list of strings</br>
-        *ex :* ```["(1+2+3)+4", ... , "4+3+2+1"]```
+        *Ex :* ```["(1+2+3)+4", ... , "4+3+2+1"]```
       
   *Note : If there's no result, the function will return an empty list*
   
