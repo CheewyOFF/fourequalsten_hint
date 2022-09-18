@@ -343,6 +343,7 @@ def calcul(pattern):
                         calcul_res = calcul_op(calcul_res,pattern["num4"],pattern["op3"])
                         calcul_res = calcul_op(pattern["num1"],calcul_res,pattern["op1"])
             else:
+                calcul_res = calcul_op(pattern["num3"],pattern["num4"],pattern["op3"])
                 if(prior_op(pattern["op1"],pattern["op2"]) == 1):
                     tmp = calcul_op(pattern["num1"],pattern["num2"],pattern["op1"])
                     calcul_res = calcul_op(tmp,calcul_res,pattern["op2"])
