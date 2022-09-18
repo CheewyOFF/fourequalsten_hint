@@ -55,9 +55,7 @@ feth.solve("<THE DIGITS>","<THE BANNED OPERATORS>",<TYPE OF RETURN>)
 *Note : Documentation of the functions are right underneath*
 
 ## Documentation
-```
-feth.solve("<THE DIGITS>","<THE BANNED OPERATORS>",<TYPE OF RETURN>)
-```
+- ```feth.solve("<THE DIGITS>","<THE BANNED OPERATORS>",<TYPE OF RETURN>)```
   The ```solve()``` function takes 3 parameters :
     - 1rst : String made of 4 digits (the ones in the enigma)
       *ex *: ```"1234"```
@@ -77,9 +75,7 @@ feth.solve("<THE DIGITS>","<THE BANNED OPERATORS>",<TYPE OF RETURN>)
       
   *Note : If there's no result, the function will return an empty list*
   
-```
-feth.fancy_solve()
-```
+- ```feth.fancy_solve()```
   The ```fancy_solve()``` function takes no parameters, and will return nothing.
   It is made of multiple affordable inputs, prints and os.clear to give to the user a casual and simple use of the program.
   
