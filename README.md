@@ -34,6 +34,10 @@ py -m pip install fourequalsten_hint
 4. Press 0 to display every solutions, or press enter if you want to skip this step
 5. If you want to use the program again, press 1, and if you want to leave, press 0
 
+## License
+
+<a href="https://github.com/CheewyOFF/fourequalsten_hint/LICENSE>MIT License</a>
+
 ## Credits :
 
 ### Fourequalsten_hint
