@@ -17,7 +17,7 @@ I had a lot of fun developping it, I hope you will enjoy it.</br>
 
 ## Installation :
 
-1. Use pip to install the package
+1. Use pip to install the package</br>
   For Unix/macOS :
   ```
   python3 -m pip install fourequalsten_hint
