@@ -93,11 +93,11 @@ Email : cheewy.perso@gmail.com
 ### 4=10
 
 Developper : Sveinn Steinarsson</br>
-Website : https://fourequalsten.app</br>
+Website : [fourequalsten.app](https://fourequalsten.app)</br>
 Email : fourequalsten@fourequalsten.app</br>
 Youtube Channel : [svenstone](https://www.youtube.com/user/svenstone)</br>
 
-***Buy Sveinn a Coffee ♥ :*** https://www.buymeacoffee.com/steinarsson
+***Buy Sveinn a Coffee ♥ :*** [Click here](https://www.buymeacoffee.com/steinarsson)
 
-Download game on Google Play Store : <a href="https://play.google.com/store/apps/details?id=app.fourequalsten.fourequalsten_app&hl=en_US&gl=US" target="_blank">Click here</a></br>
-Download game on Apple Play Store : <a href="https://apps.apple.com/us/app/4-10/id1609871477" target="_blank">Click here</a>
+Download game on Google Play Store : [Click here](https://play.google.com/store/apps/details?id=app.fourequalsten.fourequalsten_app&hl=en_US&gl=US")</br>
+Download game on Apple Play Store : [Click here](https://apps.apple.com/us/app/4-10/id1609871477)
