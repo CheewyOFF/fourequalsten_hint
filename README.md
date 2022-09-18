@@ -49,7 +49,7 @@ feth.fancy_solve()
 **If you want to use the functions in your program :**
 
 ```
-feth.solve("<THE DIGITS>","<THE BANNED OPERATORS>",<TYPE OF RETURN>)
+feth.solve(input_nb,input_op,all_solutions)
 ```
 
 *Note : Documentation of the functions are right underneath*
