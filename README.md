@@ -66,17 +66,17 @@ feth.solve("<THE DIGITS>","<THE BANNED OPERATORS>",<TYPE OF RETURN>)
         - '*' for multiplication
         - '/' for division
         - Empty string for none : ""</br>
-      *ex :* ```"+"```, ```"-+"```, ```""```
+    *Ex :* ```"+"```, ```"-+"```, ```""```
     - 3rd : 0 or 1 depending of the informations you want in return</br>
-      0 : Returns one possible solution in the form of a string</br>
-        *Ex :* ```"(1+2+3)+4"```</br>
-      1 : Returns every possible solutions in the form of a list of strings</br>
-        *Ex :* ```["(1+2+3)+4", ... , "4+3+2+1"]```
+        - 0 : Returns one possible solution in the form of a string</br>
+          *Ex :* ```"(1+2+3)+4"```</br>
+        - 1 : Returns every possible solutions in the form of a list of strings</br>
+          *Ex :* ```["(1+2+3)+4", ... , "4+3+2+1"]```
       
   *Note : If there's no result, the function will return an empty list*
   
 - ```feth.fancy_solve()```</br>
-  The ```fancy_solve()``` function takes no parameters, and will return nothing.
+  The ```fancy_solve()``` function takes no parameters, and will return nothing.</br>
   It is made of multiple affordable inputs, prints and os.clear to give to the user a casual and simple use of the program.
   
 ## License
