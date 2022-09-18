@@ -58,16 +58,16 @@ feth.solve("<THE DIGITS>","<THE BANNED OPERATORS>",<TYPE OF RETURN>)
 - ```feth.solve(input_nb,input_op,all_solutions)```</br></br>
   The ```solve()``` function takes 3 parameters :
     - **input_nb** (str) : String made of 4 digits (the ones in the enigma)</br>
-      *Ex :* ```"1234"```
-    </br></br>- **input_op** (str) : String made of the banned operators</br>
+      *Ex :* ```"1234"```</br></br>
+    - **input_op** (str) : String made of the banned operators</br>
         Working chars :
         - '+' for plus
         - '-' for minus
         - '*' for multiplication
         - '/' for division
         - Empty string for none : ""</br>
-      *Ex :* ```"+"```, ```"-+"```, ```""```
-    </br></br>- **all_solutions** (int) : 0 or 1 depending of the informations you want in return</br>
+      *Ex :* ```"+"```, ```"-+"```, ```""```</br></br>
+    - **all_solutions** (int) : 0 or 1 depending of the informations you want in return</br>
         - 0 : Returns one possible solution in the form of a string</br>
           *Ex :* ```"(1+2+3)+4"```</br>
         - 1 : Returns every possible solutions in the form of a list of strings</br>
