@@ -29,7 +29,7 @@ def fancy_solve():
 
         for k in range(len(current_nb)):
             current_nb[k] = int(current_nb[k])
-        pattern = {"par_ou1" : 0, "num1" : -1, "op1" : 0, "par_ou2" : 0, "num2" : -1, "par_fe1" : 0, "op2" : 0, "par_ou3" : 0, "num3"  : -1, "par_fe2" : 0, "op3" : 0, "num4" : -1, "par_fe3" : 0}
+        pattern = {"tmp1" : 0, "tmp2" : 0, "par" : (0,0), "par_ou1" : 0, "num1" : -1, "op1" : 0, "par_ou2" : 0, "num2" : -1, "par_fe1" : 0, "op2" : 0, "par_ou3" : 0, "num3"  : -1, "par_fe2" : 0, "op3" : 0, "num4" : -1, "par_fe3" : 0}
 
         solution = research(pattern,current_nb,operator_list)
         os.system('cls')
@@ -84,7 +84,7 @@ def solve(input_nb,input_op,all_solutions):
 
         for k in range(len(current_nb)):
             current_nb[k] = int(current_nb[k])
-        pattern = {"par_ou1" : 0, "num1" : -1, "op1" : 0, "par_ou2" : 0, "num2" : -1, "par_fe1" : 0, "op2" : 0, "par_ou3" : 0, "num3"  : -1, "par_fe2" : 0, "op3" : 0, "num4" : -1, "par_fe3" : 0}
+        pattern = {"tmp1" : 0, "tmp2" : 0, "par" : (0,0), "par_ou1" : 0, "num1" : -1, "op1" : 0, "par_ou2" : 0, "num2" : -1, "par_fe1" : 0, "op2" : 0, "par_ou3" : 0, "num3"  : -1, "par_fe2" : 0, "op3" : 0, "num4" : -1, "par_fe3" : 0}
 
         solution = research(pattern,current_nb,operator_list)
 
@@ -210,44 +210,54 @@ def valid_pattern(pattern):
 def add_par(x,y,pattern):
     if(x in [0,1,2,3]):
         if(x == 1):
+            pattern["par"][0] = 1
             pattern["par_ou1"] = 1
             pattern["par_ou2"] = 0
             pattern["par_ou3"] = 0
 
             if(y == 1):
+                pattern["par"][1] = 1
                 pattern["par_fe1"] = 1
                 pattern["par_fe2"] = 0
                 pattern["par_fe3"] = 0
             elif(y == 2):
+                pattern["par"][1] = 2
                 pattern["par_fe1"] = 0
                 pattern["par_fe2"] = 1
                 pattern["par_fe3"] = 0
         elif(x == 2):
+            pattern["par"][0] = 2
             pattern["par_ou1"] = 0
             pattern["par_ou2"] = 1
             pattern["par_ou3"] = 0
 
             if(y == 1):
+                pattern["par"][1] = 2
                 pattern["par_fe1"] = 0
                 pattern["par_fe2"] = 1
                 pattern["par_fe3"] = 0
             elif(y == 2):
+                pattern["par"][1] = 3
                 pattern["par_fe1"] = 0
                 pattern["par_fe2"] = 0
                 pattern["par_fe3"] = 1
         elif(x == 3):
+            pattern["par"][0] = 3
             pattern["par_ou1"] = 0
             pattern["par_ou2"] = 0
             pattern["par_ou3"] = 1
 
+            pattern["par"][1] = 3
             pattern["par_fe1"] = 0
             pattern["par_fe2"] = 0
             pattern["par_fe3"] = 1
         else:
+            pattern["par"][0] = 0
             pattern["par_ou1"] = 0
             pattern["par_ou2"] = 0
             pattern["par_ou3"] = 0
 
+            pattern["par"][1] = 0
             pattern["par_fe1"] = 0
             pattern["par_fe2"] = 0
             pattern["par_fe3"] = 0
@@ -277,8 +287,26 @@ def calcul(pattern):
     if(valid_pattern):
         calcul_res = 0
         tmp = 0
+        par = pattern["par"]
+        remaining_op = [1,2,3]
+        remaining_nb = [1,2,3,4]
 
-        if(pattern["par_ou1"] == 1):
+        if(par != (0,0)):
+            par_diff = (par[1]-par[0])
+
+            if(par_diff == 1):
+                pattern["tmp1"] = calcul_op(pattern["num" + str(par[0])],pattern["op" + str(par[0])],pattern["num" + str(par[0]+1)])
+                remaining_op.remove(par[0])
+                remaining_nb.remove(par[0])
+                remaining_nb.remove(par[0]+1)
+                remaining_nb.insert(par[0],-1)
+                best_op = prior_op(remaining_op[0],remaining_op[1])
+            else:
+
+
+        else:
+
+        """ if(pattern["par_ou1"] == 1):
             if(pattern["par_fe1"] == 1):
                 calcul_res = calcul_op(pattern["num1"],pattern["num2"],pattern["op1"])
                 if(prior_op(pattern["op2"],pattern["op3"]) == 1):
@@ -349,7 +377,7 @@ def calcul(pattern):
                     calcul_res = calcul_op(tmp,calcul_res,pattern["op2"])
                 else:
                     calcul_res = calcul_op(pattern["num2"],calcul_res,pattern["op2"])
-                    calcul_res = calcul_op(pattern["num1"],calcul_res,pattern["op1"])
+                    calcul_res = calcul_op(pattern["num1"],calcul_res,pattern["op1"]) """
 
         if(calcul_res == 10):
             res = str_calcul(pattern)
@@ -384,9 +412,9 @@ def prior_op(op1,op2):
         id_op2 = def_prior.index(op2)
 
         if(id_op1 <= id_op2):
-            return 1
+            return op1[2]
         else:
-            return 2
+            return op2[2]
     else:
         print("ERROR : One of the two operators given are invalid !")
         return False
