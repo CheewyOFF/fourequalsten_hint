@@ -29,7 +29,7 @@ def fancy_solve():
 
         for k in range(len(current_nb)):
             current_nb[k] = int(current_nb[k])
-        pattern = {"tmp1" : 0, "tmp2" : 0, "par" : (0,0), "par_ou1" : 0, "num1" : -1, "op1" : 0, "par_ou2" : 0, "num2" : -1, "par_fe1" : 0, "op2" : 0, "par_ou3" : 0, "num3"  : -1, "par_fe2" : 0, "op3" : 0, "num4" : -1, "par_fe3" : 0}
+        pattern = {"num-1" : 0, "num-2" : 0, "par" : (0,0), "par_ou1" : 0, "num1" : -1, "op1" : 0, "par_ou2" : 0, "num2" : -1, "par_fe1" : 0, "op2" : 0, "par_ou3" : 0, "num3"  : -1, "par_fe2" : 0, "op3" : 0, "num4" : -1, "par_fe3" : 0}
 
         solution = research(pattern,current_nb,operator_list)
         os.system('cls')
@@ -84,7 +84,7 @@ def solve(input_nb,input_op,all_solutions):
 
         for k in range(len(current_nb)):
             current_nb[k] = int(current_nb[k])
-        pattern = {"tmp1" : 0, "tmp2" : 0, "par" : (0,0), "par_ou1" : 0, "num1" : -1, "op1" : 0, "par_ou2" : 0, "num2" : -1, "par_fe1" : 0, "op2" : 0, "par_ou3" : 0, "num3"  : -1, "par_fe2" : 0, "op3" : 0, "num4" : -1, "par_fe3" : 0}
+        pattern = {"num-1" : 0, "num-2" : 0, "par" : (0,0), "par_ou1" : 0, "num1" : -1, "op1" : 0, "par_ou2" : 0, "num2" : -1, "par_fe1" : 0, "op2" : 0, "par_ou3" : 0, "num3"  : -1, "par_fe2" : 0, "op3" : 0, "num4" : -1, "par_fe3" : 0}
 
         solution = research(pattern,current_nb,operator_list)
 
@@ -295,12 +295,17 @@ def calcul(pattern):
             par_diff = (par[1]-par[0])
 
             if(par_diff == 1):
-                pattern["tmp1"] = calcul_op(pattern["num" + str(par[0])],pattern["op" + str(par[0])],pattern["num" + str(par[0]+1)])
+                pattern["num-1"] = calcul_op(pattern["num" + str(par[0])],pattern["op" + str(par[0])],pattern["num" + str(par[0]+1)])
                 remaining_op.remove(par[0])
                 remaining_nb.remove(par[0])
                 remaining_nb.remove(par[0]+1)
-                remaining_nb.insert(par[0],-1)
-                best_op = prior_op(remaining_op[0],remaining_op[1])
+                remaining_nb.insert(par[0]-1,-1)
+                best_op = remaining_op.index(prior_op("op" + str(remaining_op[0]),"op" + str(remaining_op[1])))
+                pattern["num-2"] = calcul_op(pattern["num" + str(remaining_nb[best_op])],pattern["op" + str(best_op)],pattern["num" + str(remaining_nb[best_op]+1)]
+                remaining_op.remove(remaining_op[best_op])
+                remaining_nb.remove(remaining_nb[best_op])
+                remaining_nb.remove(remaining_nb[best_op]+1)
+                remaining_nb.insert(best_op,-2)                   
             else:
 
 
