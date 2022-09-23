@@ -305,7 +305,8 @@ def calcul(pattern):
                 remaining_op.remove(remaining_op[best_op])
                 remaining_nb.remove(remaining_nb[best_op])
                 remaining_nb.remove(remaining_nb[best_op]+1)
-                remaining_nb.insert(best_op,-2)                   
+                remaining_nb.insert(best_op,-2)
+                calcul_res = calcul_op(pattern["num" + str(remaining_nb[0])],pattern["op" + str(remaining_op[0])],pattern["num" + str(remaining_nb[1])]
             else:
 
 
