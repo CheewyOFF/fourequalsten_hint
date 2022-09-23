@@ -29,7 +29,7 @@ def fancy_solve():
 
         for k in range(len(current_nb)):
             current_nb[k] = int(current_nb[k])
-        pattern = {"num-1" : 0, "num-2" : 0, "par" : (0,0), "par_ou1" : 0, "num1" : -1, "op1" : 0, "par_ou2" : 0, "num2" : -1, "par_fe1" : 0, "op2" : 0, "par_ou3" : 0, "num3"  : -1, "par_fe2" : 0, "op3" : 0, "num4" : -1, "par_fe3" : 0}
+        pattern = {"par_ou1" : 0, "num1" : -1, "op1" : 0, "par_ou2" : 0, "num2" : -1, "par_fe1" : 0, "op2" : 0, "par_ou3" : 0, "num3"  : -1, "par_fe2" : 0, "op3" : 0, "num4" : -1, "par_fe3" : 0}
 
         solution = research(pattern,current_nb,operator_list)
         os.system('cls')
@@ -84,16 +84,10 @@ def solve(input_nb,input_op,all_solutions):
 
         for k in range(len(current_nb)):
             current_nb[k] = int(current_nb[k])
-        pattern = {"num-1" : 0, "num-2" : 0, "par" : (0,0), "par_ou1" : 0, "num1" : -1, "op1" : 0, "par_ou2" : 0, "num2" : -1, "par_fe1" : 0, "op2" : 0, "par_ou3" : 0, "num3"  : -1, "par_fe2" : 0, "op3" : 0, "num4" : -1, "par_fe3" : 0}
+        pattern = {"par_ou1" : 0, "num1" : -1, "op1" : 0, "par_ou2" : 0, "num2" : -1, "par_fe1" : 0, "op2" : 0, "par_ou3" : 0, "num3"  : -1, "par_fe2" : 0, "op3" : 0, "num4" : -1, "par_fe3" : 0}
 
         solution = research(pattern,current_nb,operator_list)
-
-        if(all_solutions == 0 and solution != []):
-            return solution[0]
-        elif(all_solutions == 1 and solution != []):
-            return solution
-        else:
-            return []
+        return solution[0] if (all_solutions == 0 and solution != []) else (solution if (all_solutions == 1 and solution != []) else [])
 
 def decompose(input,x):
     number_list = ["0","1","2","3","4","5","6","7","8","9"]
@@ -189,9 +183,8 @@ def research(pattern,current_nb,operator_list):
                 pattern["op2"] = operator_equ[(nb_signe//len(operator_list))%len(operator_list)]
                 pattern["op3"] = operator_equ[nb_signe%len(operator_list)]
                 if(no_swap == 0):
-                    res = calcul(pattern)
-                    if(res != "unsolved" and res != "invalid"):
-                        solution.append(res)
+                    if(eval(str_calcul(pattern)) == 10):
+                        solution.append(str_calcul(pattern))
                 nb_signe += 1
             nb_chiffre += 1
         nb_par += 1
@@ -199,69 +192,14 @@ def research(pattern,current_nb,operator_list):
 
     return solution
 
-def valid_pattern(pattern):
-    if(pattern["op1"] == 0 or pattern["op2"] == 0 or pattern["op3"] == 0):
-        res = False
-    else:
-        res = True
-
-    return res
-
-def add_par(x,y,pattern):
-    if(x in [0,1,2,3]):
-        if(x == 1):
-            pattern["par"][0] = 1
-            pattern["par_ou1"] = 1
-            pattern["par_ou2"] = 0
-            pattern["par_ou3"] = 0
-
-            if(y == 1):
-                pattern["par"][1] = 1
-                pattern["par_fe1"] = 1
-                pattern["par_fe2"] = 0
-                pattern["par_fe3"] = 0
-            elif(y == 2):
-                pattern["par"][1] = 2
-                pattern["par_fe1"] = 0
-                pattern["par_fe2"] = 1
-                pattern["par_fe3"] = 0
-        elif(x == 2):
-            pattern["par"][0] = 2
-            pattern["par_ou1"] = 0
-            pattern["par_ou2"] = 1
-            pattern["par_ou3"] = 0
-
-            if(y == 1):
-                pattern["par"][1] = 2
-                pattern["par_fe1"] = 0
-                pattern["par_fe2"] = 1
-                pattern["par_fe3"] = 0
-            elif(y == 2):
-                pattern["par"][1] = 3
-                pattern["par_fe1"] = 0
-                pattern["par_fe2"] = 0
-                pattern["par_fe3"] = 1
-        elif(x == 3):
-            pattern["par"][0] = 3
-            pattern["par_ou1"] = 0
-            pattern["par_ou2"] = 0
-            pattern["par_ou3"] = 1
-
-            pattern["par"][1] = 3
-            pattern["par_fe1"] = 0
-            pattern["par_fe2"] = 0
-            pattern["par_fe3"] = 1
-        else:
-            pattern["par"][0] = 0
-            pattern["par_ou1"] = 0
-            pattern["par_ou2"] = 0
-            pattern["par_ou3"] = 0
-
-            pattern["par"][1] = 0
-            pattern["par_fe1"] = 0
-            pattern["par_fe2"] = 0
-            pattern["par_fe3"] = 0
-
+def clean_par(pattern):
+    pattern["par_ou1"] = 0
+    pattern["par_ou2"] = 0
+    pattern["par_ou3"] = 0
+    pattern["par_fe1"] = 0
+    pattern["par_fe2"] = 0
+    pattern["par_fe3"] = 0
+    
     return pattern
 
 def str_calcul(pattern):
@@ -283,72 +221,22 @@ def str_calcul(pattern):
     
     return str_calcul
 
-def calcul(pattern):
-    if(valid_pattern):
-        calcul_res = eval(str_calcul(pattern))
-        if(calcul_res == 10):
-            res = str_calcul(pattern)
-        else:
-            res = "unsolved"
-
-    else:
-        res = "invalid"
-
-    return res
-
-def calcul_op(x,y,op):
-    if(op == "+"):
-        return x+y
-    elif(op == "-"):
-        return x-y
-    elif(op == "*"):
-        return x*y
-    elif(op == "/"):
-        if(y != 0):
-            return x/y
-        else:
-            return 9999
-    else:
-        print("ERROR : Invalid operator !")
-        return False
-
-def prior_op(op1,op2):
-    def_prior = ["*","/","-","+"]
-    if(op1 in def_prior and op2 in def_prior):
-        id_op1 = def_prior.index(op1)
-        id_op2 = def_prior.index(op2)
-
-        if(id_op1 <= id_op2):
-            return op1[2]
-        else:
-            return op2[2]
-    else:
-        print("ERROR : One of the two operators given are invalid !")
-        return False
-
 def par_pattern(x,pattern):
+    pattern = clean_par(pattern)
     if(x == 1):
-        pattern = add_par(1,1,pattern)   
+        pattern["par_ou1"] = 1 
+        pattern["par_fe1"] = 1 
     elif(x == 2):
-        pattern = add_par(1,2,pattern)
+        pattern["par_ou1"] = 1 
+        pattern["par_fe2"] = 1 
     elif(x == 3):
-        pattern = add_par(2,1,pattern) 
+        pattern["par_ou2"] = 1 
+        pattern["par_fe2"] = 1 
     elif(x == 4):
-        pattern = add_par(2,2,pattern) 
+        pattern["par_ou2"] = 1 
+        pattern["par_fe3"] = 1 
     elif(x == 5):
-        pattern = add_par(3,1,pattern) 
+        pattern["par_ou3"] = 1 
+        pattern["par_ou3"] = 1 
 
     return pattern
-                                       
-def change_rem_state():
-    
-                                       
-                                       
-                                       
-                                       
-                                       
-                                       
-                                       
-                                       
-                                       
-                                       
