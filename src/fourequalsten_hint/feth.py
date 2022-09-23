@@ -297,17 +297,27 @@ def calcul(pattern):
             if(par_diff == 1):
                 pattern["num-1"] = calcul_op(pattern["num" + str(par[0])],pattern["op" + str(par[0])],pattern["num" + str(par[0]+1)])
                 remaining_op.remove(par[0])
-                remaining_nb.remove(par[0])
-                remaining_nb.remove(par[0]+1)
+                remaining_nb = [e for e in remaining_nb if e not in [par[0],par[0]+1]
                 remaining_nb.insert(par[0]-1,-1)
-                best_op = remaining_op.index(prior_op("op" + str(remaining_op[0]),"op" + str(remaining_op[1])))
+                best_op = remaining_op.index(prior_op(pattern["op" + str(remaining_op[0])],pattern["op" + str(remaining_op[1]))])
                 pattern["num-2"] = calcul_op(pattern["num" + str(remaining_nb[best_op])],pattern["op" + str(best_op)],pattern["num" + str(remaining_nb[best_op]+1)]
                 remaining_op.remove(remaining_op[best_op])
-                remaining_nb.remove(remaining_nb[best_op])
-                remaining_nb.remove(remaining_nb[best_op]+1)
+                remaining_nb = [e for e in remaining_nb if e not in [remaining_nb[best_op],remaining_nb[best_op]+1]
                 remaining_nb.insert(best_op,-2)
                 calcul_res = calcul_op(pattern["num" + str(remaining_nb[0])],pattern["op" + str(remaining_op[0])],pattern["num" + str(remaining_nb[1])]
             else:
+                best_op = prior_op(pattern["op" + str(par[0])],pattern["op" + str(par[0]+1)])
+                sec_op = [par[0],par[0]+1]
+                sec_op.remove(best_op)
+                pattern["num-1"] = calcul_op(pattern["num" + str(best_op)],pattern["op" + str(best_op)],pattern["num" + str(best_op+1)])     
+                remaining_op.remove(best_op)
+                remaining_nb = [e for e in remaining_nb if e not in [best_op,best_op+1]
+                remaining_nb.insert(best_op-1,-1)
+                pattern["num-2"] = calcul_op(pattern["num" + str(remaining_nb[sec_op.index[0]]),pattern["op" + str(sec_op[0])],pattern["num" + str(remaining_nb[sec_op.index[0]]+1)]
+                remaining_op.remove(remaining_op[sec_op[0])
+                remaining_nb = [e for e in remaining_nb if e not in [remaining_nb[best_op],remaining_nb[best_op]+1]
+                remaining_nb.insert(best_op,-2)
+                calcul_res = calcul_op(pattern["num" + str(remaining_nb[0])],pattern["op" + str(remaining_op[0])],pattern["num" + str(remaining_nb[1])]
 
 
         else:
@@ -438,3 +448,16 @@ def par_pattern(x,pattern):
         pattern = add_par(3,1,pattern) 
 
     return pattern
+                                       
+def change_rem_state():
+    
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
