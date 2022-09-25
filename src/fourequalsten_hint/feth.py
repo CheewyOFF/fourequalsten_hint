@@ -183,7 +183,12 @@ def research(pattern,current_nb,operator_list):
                 pattern["op2"] = operator_equ[(nb_signe//len(operator_list))%len(operator_list)]
                 pattern["op3"] = operator_equ[nb_signe%len(operator_list)]
                 if(no_swap == 0):
-                    if(eval(str_calcul(pattern)) == 10):
+                    try:
+                        res = eval(str_calcul(pattern))
+                    except ZeroDivisionError:
+                        res = 0
+
+                    if(res == 10):
                         solution.append(str_calcul(pattern))
                 nb_signe += 1
             nb_chiffre += 1
@@ -191,16 +196,6 @@ def research(pattern,current_nb,operator_list):
         pattern = par_pattern(nb_par,pattern)
 
     return solution
-
-def clean_par(pattern):
-    pattern["par_ou1"] = 0
-    pattern["par_ou2"] = 0
-    pattern["par_ou3"] = 0
-    pattern["par_fe1"] = 0
-    pattern["par_fe2"] = 0
-    pattern["par_fe3"] = 0
-    
-    return pattern
 
 def str_calcul(pattern):
     str_calcul = str(pattern["num1"]) + str(pattern["op1"]) + str(pattern["num2"]) + str(pattern["op2"]) + str(pattern["num3"]) + str(pattern["op3"]) + str(pattern["num4"])
@@ -220,6 +215,17 @@ def str_calcul(pattern):
         str_calcul = str_calcul[:4] + "(" + str_calcul[4:] + ")"
     
     return str_calcul
+
+    
+def clean_par(pattern):
+    pattern["par_ou1"] = 0
+    pattern["par_ou2"] = 0
+    pattern["par_ou3"] = 0
+    pattern["par_fe1"] = 0
+    pattern["par_fe2"] = 0
+    pattern["par_fe3"] = 0
+    
+    return pattern
 
 def par_pattern(x,pattern):
     pattern = clean_par(pattern)
