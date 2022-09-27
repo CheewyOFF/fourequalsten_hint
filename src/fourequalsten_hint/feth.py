@@ -88,9 +88,12 @@ def solve(input_nb,input_op,all_solutions):
 
         solution = research(pattern,current_nb,operator_list)
         
-        if(all_solutions == 0 and solution != []) return solution[0]
-        elif(all_solutions == 1 and solution != []) return solution
-        else return []
+        if(all_solutions == 0 and solution != []):
+            return solution[0]
+        elif(all_solutions == 1 and solution != []):
+            return solution
+        else:
+            return []
 
 def decompose(input,x):
     number_list = ["0","1","2","3","4","5","6","7","8","9"]
