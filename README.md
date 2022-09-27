@@ -104,7 +104,12 @@ feth.fancy_solve()
   
 - ```feth.fancy_solve()```</br></br>
   The ```fancy_solve()``` function takes no parameters, and will return nothing.</br>
-  It is made of multiple affordable inputs, prints and os.clear to give to the user a casual and simple use of the program.
+  It is made of multiple affordable inputs, prints and os.clear to give to the user a casual and simple use of the program.</br>
+  Steps :
+    1. Ask for 4 digits
+    2. Ask for (potential) banned operators
+    3. Display the first solution, the number of possible solution and propose to display every solution
+    4. Propose to re-execute the program
   
 ## License
 
