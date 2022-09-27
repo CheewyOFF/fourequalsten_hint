@@ -87,7 +87,10 @@ def solve(input_nb,input_op,all_solutions):
         pattern = {"par_ou1" : 0, "num1" : -1, "op1" : 0, "par_ou2" : 0, "num2" : -1, "par_fe1" : 0, "op2" : 0, "par_ou3" : 0, "num3"  : -1, "par_fe2" : 0, "op3" : 0, "num4" : -1, "par_fe3" : 0}
 
         solution = research(pattern,current_nb,operator_list)
-        return solution[0] if (all_solutions == 0 and solution != []) else (solution if (all_solutions == 1 and solution != []) else [])
+        
+        if(all_solutions == 0 and solution != []) return solution[0]
+        elif(all_solutions == 1 and solution != []) return solution
+        else return []
 
 def decompose(input,x):
     number_list = ["0","1","2","3","4","5","6","7","8","9"]
