@@ -261,19 +261,19 @@ def research(pattern,current_nb,operator_list):
                     pattern["op2"] = operator_list[(nb_signe//len(operator_list))%len(operator_list)]
                     pattern["op3"] = operator_list[nb_signe%len(operator_list)]
                 
-                # Calculating the outputed pattern
-                try:
-                    # Transforming the pattern into a string and calculating it thanks to the eval() function
-                    res = eval(str_calcul(pattern))
-                # If there is a division by zero, return 0 (!= of 10 so it won't count)
-                except ZeroDivisionError:
-                    res = 0
+                    # Calculating the outputed pattern
+                    try:
+                        # Transforming the pattern into a string and calculating it thanks to the eval() function
+                        res = eval(str_calcul(pattern))
+                    # If there is a division by zero, return 0 (!= of 10 so it won't count)
+                    except ZeroDivisionError:
+                        res = 0
 
-                # If the pattern is a solution, save it into the 'solution' list
-                if(res == 10):
-                    solution.append(str_calcul(pattern))
-                # Just iterating every while condition
-                nb_signe += 1
+                    # If the pattern is a solution, save it into the 'solution' list
+                    if(res == 10):
+                        solution.append(str_calcul(pattern))
+                    # Just iterating every while condition
+                    nb_signe += 1
             nb_chiffre += 1
         nb_par += 1
 
@@ -336,3 +336,5 @@ def par_pattern(x,pattern):
         pattern["par_ou3"] = 1 
 
     return pattern
+
+print(solve("6031","+",1))
