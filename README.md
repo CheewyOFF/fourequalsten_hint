@@ -2,6 +2,14 @@
 
 ***by Cheewy***
 
+## Version
+
+New v1.0.4 Release :
+- Addition of comments :)
+- Addition of an ```example.py``` file to test all the functionnalities
+- Removal of TONS of useless code (more code deleted than comments added O_O)
+- Optimization of the calcul process
+
 ## Description : 
 
 This tiny program in Python allows you to quickly and simply calculate every possible solutions to the famous *4=10* game.</br>
