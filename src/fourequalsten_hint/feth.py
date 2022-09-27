@@ -336,5 +336,3 @@ def par_pattern(x,pattern):
         pattern["par_ou3"] = 1 
 
     return pattern
-
-print(solve("6031","+",1))
