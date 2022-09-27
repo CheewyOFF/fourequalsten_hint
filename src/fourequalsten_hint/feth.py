@@ -1,37 +1,71 @@
+# Author : Cheewy
+# Filename : feth.py
+
+# List of usable functions : 
+#   - fancy_solve()
+#   - solve(input_nb,input_op,all_solutions)
+
+# List of other functions :
+#   - decompose(input,x)
+#   - research(pattern,current_nb,operator_list)
+#   - str_calcul(pattern)
+#   - clean_par(pattern)
+#   - par_pattern(x,pattern)
+
+# Usable function : Fancy display for solving the enigma
 def fancy_solve():
     import os
 
     missing_operator = []
     current_nb = []
 
+    # While the user don't quit (ask at the end)
     cont = "1"
     while(cont == "1"):
+        # Clear the terminal
         os.system('cls')
+        
+        # Asking the 4 digits and calls decompose() to verify the input
         input_str = str(input("Enter the 4 enigma's digits : "))
         while(decompose(input_str,0) == []):
             input_str = str(input("Enter the 4 enigma's digits : "))
 
+        # For display purpose (after the solving)
         tmp_digits = input_str
-        current_nb = decompose(input_str,0)
+        
+        #  Transform the string into a 4 element list
+        current_nb = list(input_str)
 
+        # Same steps for the banned operators (up to line 45)
         input_str = str(input("Enter the banned operators (Press Enter if there's none) : "))
         while(decompose(input_str,1) == []):
             input_str = str(input("Enter the banned operators (Press Enter if there's none) : "))
 
         tmp_banop = input_str
-        missing_operator = decompose(input_str,1)
+        missing_operator = list(input_str)
 
+        
         operator_list = ["+","-","*","/"]
 
+        # Delete the banned operators from the above list
         if missing_operator != ["none"]:
             for i in missing_operator:
                 operator_list.remove(i)
 
+        # Transform the 4 strings of the current_nb list into ints
         for k in range(len(current_nb)):
             current_nb[k] = int(current_nb[k])
+            
+        # Generate the pattern dictionnary, which is the lung of the program. Consist of :
+        #   - Every opening and closing parenthesis, with a 0 or a 1, depending if there's one or not
+        #   - Every position for the numbers of the enigma (containing one of the numbers)
+        #   - Every position for the operators of the enigma (containing one of the allowed operators)
         pattern = {"par_ou1" : 0, "num1" : -1, "op1" : 0, "par_ou2" : 0, "num2" : -1, "par_fe1" : 0, "op2" : 0, "par_ou3" : 0, "num3"  : -1, "par_fe2" : 0, "op3" : 0, "num4" : -1, "par_fe3" : 0}
 
+        # Calls the research() function, which will send the result(s) of the enigma
         solution = research(pattern,current_nb,operator_list)
+      
+        # Fancy display...
         os.system('cls')
         print("Digits : " + tmp_digits)
         if(missing_operator == ["none"]):
@@ -53,11 +87,14 @@ def fancy_solve():
                 print("")
                 print("Would you like to see all the answers ?")
 
+                # Propose to display every solution (0 for yes, Enter to skip)
                 display_all = str(input("(Press Enter to skip, 0 to display all possible solutions) : "))
                 while(display_all != "" and display_all != "0"):
                     display_all = str(input("(Press Enter to skip, 0 to display all possible solutions) : "))
 
                 print("")
+                
+                # Display every solution if desired
                 if(display_all == "0"):
                     for k in range(len(solution)):
                         print("Solution n°"+str(k+1)+" : "+solution[k])
@@ -65,7 +102,8 @@ def fancy_solve():
         print("")
         print("")
         print("")
-                
+           
+        # Propose to re-execute the program
         cont = str(input("Would you like to continue ? (1 for YES, 0 for NO) : "))
         while(cont not in ["1","0"]):
             print("Please enter either 0 or 1.")
@@ -234,11 +272,7 @@ def par_pattern(x,pattern):
         pattern["par_fe1"] = 1 
     elif(x == 2):
         pattern["par_ou1"] = 1 
-        pattern["par_fe2    nb_signe = 0
-150
-    nb_chiffre = 0
-151
-    no_swap = 0"] = 1 
+        pattern["par_fe2"] = 1 
     elif(x == 3):
         pattern["par_ou2"] = 1 
         pattern["par_fe2"] = 1 
