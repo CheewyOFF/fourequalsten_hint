@@ -140,15 +140,12 @@ def decompose(input,x):
     return res
 
 def research(pattern,current_nb,operator_list):
-    nb_chiffre = {}
+    nb_par, nb_signe, nb_chiffre, no_sawp = 0
+    nb_chiffre, operator_equ = {}
+    solution = []
 
     for i in current_nb:
         nb_chiffre[i] = current_nb.count(i)
-
-    nb_par, nb_signe, nb_chiffre, no_sawp = 0
-    solution = []
-
-    operator_equ = {}
 
     for k in range(len(operator_list)):
         operator_equ[k] = operator_list[k]
@@ -237,7 +234,11 @@ def par_pattern(x,pattern):
         pattern["par_fe1"] = 1 
     elif(x == 2):
         pattern["par_ou1"] = 1 
-        pattern["par_fe2"] = 1 
+        pattern["par_fe2    nb_signe = 0
+150
+    nb_chiffre = 0
+151
+    no_swap = 0"] = 1 
     elif(x == 3):
         pattern["par_ou2"] = 1 
         pattern["par_fe2"] = 1 
