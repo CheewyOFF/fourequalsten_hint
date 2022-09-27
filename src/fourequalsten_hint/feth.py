@@ -145,10 +145,7 @@ def research(pattern,current_nb,operator_list):
     for i in current_nb:
         nb_chiffre[i] = current_nb.count(i)
 
-    nb_par = 0
-    nb_signe = 0
-    nb_chiffre = 0
-    no_swap = 0
+    nb_par, nb_signe, nb_chiffre, no_sawp = 0
     solution = []
 
     operator_equ = {}
@@ -162,7 +159,7 @@ def research(pattern,current_nb,operator_list):
             no_swap = 0
             nb_signe = 0
             if(nb_par == 0 and nb_signe == 0 and nb_chiffre == 0):
-                pattern["num1"] = current_nb[0]
+                pattern["num1"], = current_nb[0]
                 pattern["num2"] = current_nb[1]
                 pattern["num3"] = current_nb[2]
                 pattern["num4"] = current_nb[3]
