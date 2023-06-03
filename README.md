@@ -129,8 +129,6 @@ feth.fancy_solve()
 
 Developper : Cheewy</br>
 
-***Buy Me a Coffee ♥ :*** [Click here](https://www.buymeacoffee.com/CheewyOFF)
-
 ### 4=10
 
 Developper : Sveinn Steinarsson</br>
